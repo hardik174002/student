@@ -17,8 +17,7 @@ pipeline {
     stages {
         stage('Checkout from GIT') {
             steps {
-                echo "Pulling the resources from git"
-                sh "git checkout ${params.BRANCH}"
+                echo "Already pulled out the resources."
             }
         }
 
