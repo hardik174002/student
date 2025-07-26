@@ -65,9 +65,9 @@ pipeline {
             steps {
                 echo "Copying JAR file to home directory"
                 sh "cp target/*.jar app.jar"
-                sh "docker stop ${IMAGE_NAME} || true"
-                sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
-                sh "docker run -d --name ${IMAGE_NAME} -p 8082:8082 ${IMAGE_NAME}:${IMAGE_TAG}"
+                //sh "docker stop ${IMAGE_NAME} || true"
+                //sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+                //sh "docker run -d --name ${IMAGE_NAME} -p 8082:8082 ${IMAGE_NAME}:${IMAGE_TAG}"
             }
         }
     }
